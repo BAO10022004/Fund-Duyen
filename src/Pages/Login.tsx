@@ -5,8 +5,6 @@ import { auth } from '../main'; // ✅ Import auth từ main.tsx
 import type { Account } from '../models/Account';
 import '../assets/Login.css';
 import {logLogin} from '../services/HistoryService';
-import { addDoc, collection, Timestamp } from 'firebase/firestore';
-import { db } from '../firebase';
 const Login = () => {
 
   const navigate = useNavigate();

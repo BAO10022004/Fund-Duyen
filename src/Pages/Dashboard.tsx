@@ -21,7 +21,7 @@ const Dashboard: React.FC = () => {
 
   const menuItems: MenuItem[] = [
     {
-      id: 'quy-phong',
+      id: 'quy-phong_duyen',
       title: 'Quỹ Phòng',
       icon: '💰',
       path: '/quy-phong',
@@ -29,7 +29,7 @@ const Dashboard: React.FC = () => {
       description: 'Quản lý quỹ chung của phòng'
     },
     {
-      id: 'accounts',
+      id: 'accounts_duyen',
       title: 'Tài Khoản',
       icon: '👥',
       path: '/accounts',
@@ -38,7 +38,7 @@ const Dashboard: React.FC = () => {
       description: 'Quản lý tài khoản người dùng'
     },
     {
-      id: 'persons',
+      id: 'persons_duyen',
       title: 'Người Dùng',
       icon: '👤',
       path: '/admin/persons',
@@ -47,7 +47,7 @@ const Dashboard: React.FC = () => {
       description: 'Quản lý thông tin cá nhân'
     },
     {
-      id: 'transactions',
+      id: 'transactions_duyen',
       title: 'Giao Dịch',
       icon: '📊',
       path: '/admin/transactions',
@@ -57,7 +57,7 @@ const Dashboard: React.FC = () => {
     },
    
     {
-      id: 'diary',
+      id: 'diary_duyen',
       title: 'Nhật ký',
       icon: '📝',
       path: '/admin/diary',
@@ -67,7 +67,7 @@ const Dashboard: React.FC = () => {
     
     },
     {
-      id: 'History',
+      id: 'History_duyen',
       title: 'Lịch Sử',
       icon: '📝',
       path: '/history',

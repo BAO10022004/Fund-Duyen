@@ -15,7 +15,7 @@ import type { Person } from '../models/Person';
 
 export const getAllPersons = async (): Promise<Person[]> => {
   try {
-    const q = query(collection(db, 'persons'), orderBy('name', 'asc'));
+    const q = query(collection(db, 'persons_duyen'), orderBy('name', 'asc'));
     const querySnapshot = await getDocs(q);
     const persons: Person[] = [];
     

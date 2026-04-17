@@ -70,7 +70,7 @@ const ManageTransactions: React.FC = () => {
   };
 
   const loadTransactions = async () => {
-    const q = query(collection(db, 'transactions'), orderBy('date', 'desc'));
+    const q = query(collection(db, 'transactions_duyen'), orderBy('date', 'desc'));
     const snapshot = await getDocs(q);
     return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Transaction));
   };
@@ -134,7 +134,7 @@ const ManageTransactions: React.FC = () => {
         alert('✅ Cập nhật giao dịch thành công!');
       } else {
         logCreate(auth.getUsername()!, `Thêm giao dịch mới cho người: ${selectedPerson?.name || ''} với số tiền: ${formData.amount}`);
-        await addDoc(collection(db, 'transactions'), transactionData);
+        await addDoc(collection(db, 'transactions_duyen'), transactionData);
         alert('✅ Thêm giao dịch thành công!');
       }
 
