@@ -130,7 +130,7 @@ const ManageTransactions: React.FC = () => {
 
       if (editingTransaction && editingTransaction.id) {
         logUpdate(auth.getUsername()!, `Cập nhật giao dịch có id: ${editingTransaction.id}`);
-        await updateDoc(doc(db, 'transactions', editingTransaction.id), transactionData);
+        await updateDoc(doc(db, 'transactions_duyen', editingTransaction.id), transactionData);
         alert('✅ Cập nhật giao dịch thành công!');
       } else {
         logCreate(auth.getUsername()!, `Thêm giao dịch mới cho người: ${selectedPerson?.name || ''} với số tiền: ${formData.amount}`);
@@ -153,7 +153,7 @@ const ManageTransactions: React.FC = () => {
     if (window.confirm('Bạn có chắc muốn xóa giao dịch này?')) {
       try {
         setLoading(true);
-        await deleteDoc(doc(db, 'transactions', id));
+        await deleteDoc(doc(db, 'transactions_duyen', id));
         await loadData();
        logDelete(auth.getUsername()!,  `Xóa giao dịch có id: ${id}`);
         alert('✅ Xóa thành công!');
